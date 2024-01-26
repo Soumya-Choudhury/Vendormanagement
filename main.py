@@ -7,8 +7,8 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24) 
 
 # Google OAuth2 configuration
-GOOGLE_CLIENT_ID = "261086046288-nf43280t94sqei96dmnr684nb7b7bbql.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
+GOOGLE_CLIENT_ID = "your-google-client-id"
+GOOGLE_CLIENT_SECRET = "your-google-client-secret-id"
 REDIRECT_URI = 'https://localhost:8501/callback'
 AUTHORIZATION_BASE_URL = "https://accounts.google.com/o/oauth2/auth"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
@@ -17,8 +17,8 @@ SCOPE = ["https://www.googleapis.com/auth/userinfo.profile", "https://www.google
 # Database configuration
 MYSQL_HOST = "localhost"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = "Soumya@27052002"
-MYSQL_DB = "vendormanagement"
+MYSQL_PASSWORD = "your-password"
+MYSQL_DB = "database-name"
 
 # Function to create a connection with the MySQL database
 def create_connection():
