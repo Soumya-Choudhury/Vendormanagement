@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Vendor</title>
+</head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .edit-vendor {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .edit-vendor input[type="text"],
+        .edit-vendor input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .edit-vendor input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-vendor input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .edit-vendor label {
+            margin-top: 10px;
+            display: block;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+<body>
+    <h1>Edit Vendor</h1>
+    <form method="post" class="edit-vendor">
+        Vendor Name: <input type="text" name="vendor_name" value="{{ vendor.vendor_name }}"><br>
+        Bank Account No: <input type="text" name="bank_account_no" value="{{ vendor.bank_account_no }}"><br>
+        Bank Name: <input type="text" name="bank_name" value="{{ vendor.bank_name }}"><br>
+        Address Line 1: <input type="text" name="address_line_1" value="{{ vendor.address_line_1 }}"><br>
+        Address Line 2: <input type="text" name="address_line_2" value="{{ vendor.address_line_2 }}"><br>
+        City: <input type="text" name="city" value="{{ vendor.city }}"><br>
+        Country: <input type="text" name="country" value="{{ vendor.country }}"><br>
+        Zip Code: <input type="text" name="zip_code" value="{{ vendor.zip_code }}"><br>
+        <input type="submit" value="Update Vendor" class="update-button">
+    </form>
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>
